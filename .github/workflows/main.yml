@@ -2,10 +2,10 @@ name: Main
 
 on:
   push:
-    branch:
+    branches:
       - master
 
-    pull_request:
+  pull_request:
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 1
       - name: file-check
         id: getfile
         run: |
