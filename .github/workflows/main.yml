@@ -19,6 +19,7 @@ jobs:
         id: get-file
         run: |
           echo "::set-output name=FILES_CHANGED::$(git diff --name-only origin/${GITHUB_BASE_REF} origin/${GITHUB_HEAD_REF})"
+          echo ${{ steps.get-file.outputs.FILES_CHANGED }}
 
       - name: echo output
         run: |
