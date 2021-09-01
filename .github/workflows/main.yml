@@ -18,10 +18,7 @@ jobs:
       - name: file-check
         id: get-file
         run: |
-          DIFF = $(git diff --name-only origin/${GITHUB_BASE_REF} origin/${GITHUB_HEAD_REF})
-          echo $DIFF
-          echo "::set-output name=FILES_CHANGED::{}"
-          echo ${{ steps.get-file.outputs.FILES_CHANGED }}
+          echo "::set-output name=FILES_CHANGED::$(git diff --name-only origin/${{github.base_ref}} origin/${{github.head_ref}} | xargs)"
 
       - name: echo output
         run: |
