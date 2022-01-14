@@ -1,0 +1,25 @@
+name: Temp
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person name'
+        required: true
+        default: 'Mona Lisa'
+      job:
+        description: 'career'
+        required: false
+        default: 'king'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: test
+        run: |
+          echo "run for fun"
