@@ -1,0 +1,12 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+
+jobs:
+  call-workflow:
+    uses: jaycxz/shared-actions/.github/workflows/ci.yaml@d6716ee2444a226b271aae984565f2d5845c8a45
