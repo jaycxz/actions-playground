@@ -9,4 +9,6 @@ on:
 
 jobs:
   call-workflow:
-    uses: jaycxz/shared-actions/.github/workflows/ci.yaml@d6716ee2444a226b271aae984565f2d5845c8a45
+    uses: jaycxz/shared-actions/.github/workflows/ci.yaml@master
+    with:
+      username: "Hello world"
