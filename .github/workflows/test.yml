@@ -11,4 +11,4 @@ jobs:
   call-workflow-temp:
     uses: jaycxz/shared-actions/.github/workflows/ci.yaml@master
     with:
-      username: 12345
+      username: "12.3.45"
