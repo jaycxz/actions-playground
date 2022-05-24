@@ -8,7 +8,7 @@ on:
   pull_request:
 
 jobs:
-  call-workflow:
+  call-workflow-temp:
     uses: jaycxz/shared-actions/.github/workflows/ci.yaml@master
     with:
       username: "Hello world"
